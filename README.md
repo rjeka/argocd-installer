@@ -1,4 +1,4 @@
-# Argo CD Installation
+# ArgoCD installer
 This project provides an easy way to install Argo CD on your system from the official ArgoCD repository and change it with customize.
 
 Using kustomize, we make the following changes to the Argo CD deployment:  
