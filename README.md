@@ -9,6 +9,8 @@ Using kustomize, we make the following changes to the Argo CD deployment:
 
 - Remove standard configmaps, RBAC, and Argo CD: Finally, we remove the standard configmaps, RBAC rules, and the Argo CD deployment that are included in the official manifest. This is because we prefer to manage these components separately, outside of the Argo CD installation. By removing them, we can avoid conflicts and ensure that our custom configuration is applied correctly.
 
+- Add RBAC configuration to use terminal in UI (for non-production environments).
+
 ## Prerequisites
 Before you can install Argo CD, you need to have the following tools installed on your system:
 - kubectl: The Kubernetes command-line tool.
