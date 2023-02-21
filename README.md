@@ -16,12 +16,18 @@ Before you can install Argo CD, you need to have the following tools installed o
 
 ## Installation
 To install Argo CD, simply run the following command:
-
+if you want switch on terminal in UI 
 ```
-kustomize build . > install-kustomization.yaml
+kustomize build overlays/staging  > install-kustomization.yaml
 kubectl create ns argocd
 kubectl apply -f install-kustomization.yaml -n argocd
 ```
+
+Without terminal
+```
+kustomize build overlays/prod  > install-kustomization.yaml
+kubectl create ns argocd
+kubect
 
 If you want to install Argo CD with the standard argocd and argocd-rbac-cm components included in the official manifest, you can enable them by commenting out a block in the kustomization.yaml file.
 To do this, find the following block in the kustomization.yaml file:
