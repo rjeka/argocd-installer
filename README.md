@@ -29,11 +29,12 @@ Without terminal
 ```
 kustomize build overlays/prod  > install-kustomization.yaml
 kubectl create ns argocd
-kubect
+kubectl apply -f install-kustomization.yaml -n argocd
+```
 
 If you want to install Argo CD with the standard argocd and argocd-rbac-cm components included in the official manifest, you can enable them by commenting out a block in the kustomization.yaml file.
 To do this, find the following block in the kustomization.yaml file:
-```
+
 - path: delete-configmaps.yaml
   target:
   kind: ConfigMap
